@@ -1,20 +1,13 @@
-
 import React from "react";
 import { Navbar,NavbarBrand,Jumbotron, Button }  from 'react-bootstrap';
 import { history } from '../_helpers/history';
 import {connect}  from 'react-redux';
 import LogoutComponent from '../login/LogoutComponent';
-import Asdf from '../login/Asdf';
+
 class Header extends React.Component{
         constructor(props){
           super(props);
         }
-    counterFunction = () => {
-
-        console.log("counter function ");
-        console.log("history ",history);        
-        this.props.history.push('/counter'); 
-    }
 
     calculation=()=>{
 
@@ -25,17 +18,11 @@ class Header extends React.Component{
     render() {
         const{loginStatus,userName} =this.props;
         return (
-            <React.Fragment className='header-main'>
-                 <Navbar className="appheader">
-                         <div className='container' >
-                             <NavbarBrand href='/'>{loginStatus == true ? "Welcome  "+userName :''} </NavbarBrand>
-                         </div>
-                         {loginStatus == true ? <Button onClick={this.counterFunction}>Counter</Button>:''}
-                         
-                         {loginStatus == true ? <Button onClick={this.calculation}>Calculator</Button>:''}
-                         <LogoutComponent/>
-                 </Navbar>
-             </React.Fragment>
+           <div>
+                <Button variant="danger" onClick={this.calculation}>
+                  ASDFASD
+                </Button>
+           </div>
         );
      }
     }

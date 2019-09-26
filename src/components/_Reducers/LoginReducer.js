@@ -11,7 +11,7 @@ const initialState={
 
 
 function loginReducer(state = initialState, action) {
-  console.log('inside login reducer',action);
+  console.log('login reducer',action.type)
   switch (action.type) {
     case userConstants.LOGIN_REQUEST:
       return {
@@ -19,14 +19,16 @@ function loginReducer(state = initialState, action) {
         userName: action.user.userName
       };
     case userConstants.LOGIN_SUCCESS:
+        console.log('inside login reducer',action.user.loginStatus,' value ',action.user.userName );
       return {
         ...state,
-        loggingIn: true,
+        loginStatus: action.user.loginStatus,
         userName: action.user.userName
       };
     case userConstants.LOGIN_FAILURE:
       return {};
     case userConstants.LOGOUT:
+        console.log('inside LogOut..................... reducer' );
       return {};
     default:
       return state

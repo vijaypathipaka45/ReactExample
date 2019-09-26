@@ -30,6 +30,7 @@
 .appheader{
   /*background-color: #512DA8;*/
   background-color: #512DA8;
+  height: 60px;
 }
 
 .row-header{

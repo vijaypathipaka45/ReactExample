@@ -2,17 +2,19 @@ import React from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBCard, MDBCardBody, MDBInput } from 'mdbreact';
 import {LoginAction} from '../_Actions/LoginAction';
 import {connect}  from 'react-redux';
-import {History} from '../_helpers/history';
+import {history} from '../_helpers/history';
 import { Button }  from 'react-bootstrap';
 
 class FormPage extends React.Component{
 constructor(props){
   super(props);
+  //this.props.dispatch(LoginAction.logout());
   this.state={
-    username : '',
+    userName : '',
     password : '',
     submitted : false
   }
+  this.props.dispatch(LoginAction.logout());
 }
 
 handleChange=(e)=> {
@@ -25,15 +27,15 @@ userLogin = ()=>{
   this.setState({submitted:true});
   console.log("userlogin function");
   console.log("this.state ",this.state)
-  if(this.state.username !='' && this.state.password !=''){
+  if(this.state.userName !='' && this.state.password !=''){
 
 
     console.log("inside if")
-   dispatch(LoginAction.login(this.state.username,this.state.password))
+   dispatch(LoginAction.login(this.state.userName,this.state.password))
    .then(user=>{
      console.log("console ++++++++++++ ",user);
      if(user.loginStatus){
-       this.props.history.push('/counter')
+       this.props.history.push('/homePage',this.state)
      }
    });
     console.log('after method call')
@@ -46,8 +48,6 @@ userLogin = ()=>{
   //this.props.dispatch(LoginAction.login());
 
 }
-
-
 
 render(){
   const { loginStatus } = this.props; 
@@ -65,11 +65,11 @@ render(){
             </div>
             <MDBCardBody className="mx-4 mt-4">
               <MDBInput label="Your email" 
-              name="username"
-              value={this.state.username}
+              name="userName"
+              value={this.state.userName}
               onChange={this.handleChange}
               group type="text" validate />
-              {this.state.submitted && this.state.username===''?
+              {this.state.submitted && this.state.userName===''?
                             <div className="help-block">Username or email is required</div>:''
                         }
               <MDBInput
@@ -121,10 +121,12 @@ render(){
 };
 }
 
-function mapStateToProps(state) {
-  const { loginStatus } = state.LoginReducer;
+
+
+const mapStateToProps=(state)=> {
+  console.log('login jsx values', state.LoginReducer);
   return {
-    loginStatus
+    loginStatus:state.LoginReducer,
   };
 }
 
