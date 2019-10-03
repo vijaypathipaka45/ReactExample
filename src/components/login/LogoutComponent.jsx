@@ -5,9 +5,10 @@ import {connect} from 'react-redux';
 import LogModal from './LogModal';
 import Header from '../header_footer/FooterComponent'
 
-class LogoutComponent extends Header{
+class LogoutComponent extends React.Component{
     constructor(props){
         super(props);
+        console.log(props)
         this.state = {
             show: false
           }; 
@@ -26,13 +27,13 @@ class LogoutComponent extends Header{
        } 
 
        logout=()=>{
-
+       console.log(this.props)
         this.setState({ show: false })
         console.log('insie show')
+        const{history}=this.props;
         const{ dispatch }=this.props;
         dispatch(LoginAction.logout())
         .then(user=>{
-          
          this.props.history.push('/',this.state)
           console.log('logout action ',user)
         });
@@ -72,9 +73,9 @@ class LogoutComponent extends Header{
 
 
 function mapStateToProps(state) {
-  console.log('login jsx values', state.LoginReducer);
+  console.log('login :::::::::::::::::::::::::::jsx values', state.LoginReducer);
   return {
-    loginStatus:state.LoginReducer,
+    loginStatus:state.LoginReducer
   };
 }
 

@@ -25,6 +25,8 @@ class Calculations extends React.Component{
         console.log("first number is  ",this.state.firstNumber)
      }
      handleSecondNumber=(e)=> {
+
+        console.log('second number ',e)
         this.setState({secondNumber: e.target.value});
 
         console.log("second number is  ",this.state.secondNumber);
@@ -41,7 +43,7 @@ class Calculations extends React.Component{
         division=()=>{ 
             console.log("division+++++++++++++++++",this.state)
 
-            axios.get("http://192.168.43.124:9090/division/"+this.state.firstNumber+"/and/"+this.state.secondNumber)
+            axios.get("http://localhost:9090/division/"+this.state.firstNumber+"/and/"+this.state.secondNumber)
         .then(response=>{
             this.setState({result:response.data});
             console.log('the division is',response);})
@@ -49,7 +51,7 @@ class Calculations extends React.Component{
     addition=()=>{  
        
         console.log("addition function ",this.state);
-       axios.get("http://192.168.43.124:9090/addingtwonumbers/"+this.state.firstNumber+"/and/"+this.state.secondNumber)
+       axios.get("http://localhost:9090/addingtwonumbers/"+this.state.firstNumber+"/and/"+this.state.secondNumber)
        .then(response=>{
            this.setState({result:response.data});
            console.log('the division is',response);})
@@ -58,7 +60,7 @@ class Calculations extends React.Component{
         }
     substraction = () => {
 
-        axios.get("http://192.168.43.124:9090/substraction/"+this.state.firstNumber+"/and/"+this.state.secondNumber)
+        axios.get("http://localhost:9090/substraction/"+this.state.firstNumber+"/and/"+this.state.secondNumber)
         .then(response=>{
             this.setState({result:response.data});
             console.log('the division is',response);})
@@ -66,7 +68,7 @@ class Calculations extends React.Component{
     }    
     multiplication=()=>{
 
-        axios.get("http://192.168.43.124:9090/multiplication/"+this.state.firstNumber+"/and/"+this.state.secondNumber)
+        axios.get("http://localhost:9090/multiplication/"+this.state.firstNumber+"/and/"+this.state.secondNumber)
         .then(response=>{
             this.setState({result:response.data});
             console.log('the division is',response);})

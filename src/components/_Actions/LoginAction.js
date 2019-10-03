@@ -1,5 +1,5 @@
 
-import {history} from '../_helpers/history';
+import history from '../_helpers/history';
 import loginService from '../_Services/LoginService';
 import loginConstants from '../_Constants/LoginConstants';
 
@@ -17,9 +17,8 @@ function login(username,password){
             .then(
                 user => { 
                     dispatch(success(user));
-                    //console.log("history is ",history);
-                   // history.push('/counter');
-                    //
+                    console.log("history is ",history);
+                    //history.push('/counter');
                     console.log("action action::::::::::::::: ",user)
                     return user;
                 },

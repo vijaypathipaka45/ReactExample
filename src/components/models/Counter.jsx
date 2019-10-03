@@ -7,12 +7,8 @@ class Counter extends React.Component{
 
     constructor(props){
         super(props);
-
         this.state={
-
-            
             number:10
-
         };
     }
 
@@ -32,12 +28,10 @@ class Counter extends React.Component{
         this.setState({number:result-1})
     }
 
-    
     decrementByFifteen =()=>{
         var result=this.state.number;
         this.setState({number:result-15})
     }
-
 
 render(){
 return(
@@ -55,10 +49,6 @@ return(
         )}
         
     </ul>
-
-
-
-
 </div>
 );
 

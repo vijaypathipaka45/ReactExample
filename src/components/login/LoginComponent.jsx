@@ -28,8 +28,6 @@ userLogin = ()=>{
   console.log("userlogin function");
   console.log("this.state ",this.state)
   if(this.state.userName !='' && this.state.password !=''){
-
-
     console.log("inside if")
    dispatch(LoginAction.login(this.state.userName,this.state.password))
    .then(user=>{

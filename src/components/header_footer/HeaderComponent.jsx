@@ -1,9 +1,11 @@
 
 import React from "react";
-import { Navbar,NavbarBrand,Jumbotron, Button }  from 'react-bootstrap';
-import { history } from '../_helpers/history';
+import { Navbar,NavbarBrand,Jumbotron, Button,Nav}  from 'react-bootstrap';
+import  history  from '../_helpers/history';
 import {connect}  from 'react-redux';
+import {Link} from 'react-router-dom';
 import LogoutComponent from '../login/LogoutComponent';
+import Example from '../models/Example';
 import Asdf from '../login/Asdf';
 class Header extends React.Component{
         constructor(props){
@@ -30,10 +32,20 @@ class Header extends React.Component{
                          <div className='container' >
                              <NavbarBrand href='/'>{loginStatus == true ? "Welcome  "+userName :''} </NavbarBrand>
                          </div>
-                         {loginStatus == true ? <Button onClick={this.counterFunction}>Counter</Button>:''}
-                         
-                         {loginStatus == true ? <Button onClick={this.calculation}>Calculator</Button>:''}
-                         <LogoutComponent/>
+                            <div className="row">
+                                <div className="col-sm-3">
+                                {loginStatus == true ? <Link to="/example" className="btn btn-link">Example</Link>:''}
+                                </div>
+                                <div className="col-sm-3">
+                                {loginStatus == true ? <Button onClick={this.counterFunction}>Counter</Button>:''}
+                                </div>
+                                <div className="col-sm-3">
+                                {loginStatus == true ? <Button onClick={this.calculation}>Calculator</Button>:''}
+                                </div>
+                                <div className="col-sm-3">
+                                {loginStatus == true ? <LogoutComponent/>:''}
+                                </div>
+                            </div>
                  </Navbar>
              </React.Fragment>
         );
