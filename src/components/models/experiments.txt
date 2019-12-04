@@ -1,0 +1,98 @@
+
+
+                            <li className='questionlist'>
+                                <div className='queno'>Question no 1
+                                    <span className='componentTopicName'>Topic:Teact components</span>
+                                </div>
+                                <input type='hidden' name='question1' value='li1'></input>
+                                <div className='questionName'>
+                                    which react component manages 404 error or pahe not found which is imported from link
+                                    <br/>
+                                </div>
+                                <ol className='orderedOptionList'>
+                                    <li>
+                                        <label>
+                                        <input type="radio" name='radio1' value='firstradiobutton'/>  First radio button
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type='radio' name='radio1'/>   second radio button
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type='radio' name='radio1'/>   third radio button
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type='radio' name='radio1'/>   fourth radio button
+                                        </label>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li className='questionlist'>
+                                <div className='queno'>Question no 2
+                                    <span className='componentTopicName'>Topic:Teact components</span>
+                                </div>
+                                <input type='hidden' name='question1' value='li1'></input>
+                                <div className='questionName'>
+                                    which react component manages 404 error or pahe not found which is imported from link
+                                    <br/>
+                                </div>
+                                <ol className='orderedOptionList'>
+                                <li>
+                                        <label>
+                                        <input type="radio" name='radio1' value='firstradiobutton'/>  First radio button
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type='radio' name='radio1'/>   second radio button
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type='radio' name='radio1'/>   third radio button
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type='radio' name='radio1'/>   fourth radio button
+                                        </label>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li className='questionlist'>
+                                <div className='queno'>Question no 3
+                                    <span className='componentTopicName'>Topic:Teact components</span>
+                                </div>
+                                <input type='hidden' name='question1' value='li1'></input>
+                                <div className='questionName'>
+                                    which react component manages 404 error or pahe not found which is imported from link
+                                    <br/>
+                                </div>
+                                <ol className='orderedOptionList'>
+                                <li>
+                                        <label>
+                                        <input type="radio" name='radio1' value='firstradiobutton'/>  First radio button
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type='radio' name='radio1'/>   second radio button
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type='radio' name='radio1'/>   third radio button
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type='radio' name='radio1'/>   fourth radio button
+                                        </label>
+                                    </li>
+                                </ol>
+                            </li>

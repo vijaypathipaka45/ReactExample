@@ -26,7 +26,9 @@ function loginReducer(state = initialState, action) {
         userName: action.user.userName
       };
     case userConstants.LOGIN_FAILURE:
-      return {};
+      return {
+        ...state
+      }; 
     case userConstants.LOGOUT:
         console.log('inside LogOut..................... reducer' );
       return {};

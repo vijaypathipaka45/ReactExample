@@ -1,0 +1,51 @@
+.takeTestForm{
+    /* margin-left: 40px;
+    border-right-width: 200px;
+    margin-right: 40px;
+    border: 11px; */
+    border: 3px solid #eee;
+    margin: auto;
+    width: 90%;
+    text-align: center;
+    padding: 16px;
+    box-shadow: 0 2px 3px #ccc;
+
+}
+.questionsClass{
+    margin: auto;
+    width: 100%;
+    border: 2px solid #eee;
+
+}
+.questionlist{
+     border: 10px;
+    /* padding: 20px; */
+    box-shadow: 0px 2px 3px #ccc;
+    list-style-type:none; 
+    padding: 4rem 2rem;
+
+}
+.questionName{
+    text-align: justify;
+}
+.orderedOptionList{
+    list-style-type:none;
+    text-align: justify;
+}
+.componentTopicName{
+    float: right!important;
+    font-size: 12px;
+}
+.queno{
+    padding: 15px;
+    border-bottom: 1px solid #e2e2e2;
+    box-sizing: border-box;
+    text-align: left;
+    
+}
+.submitTestButton{
+    border: 10px;
+    padding: 10px;
+    box-shadow: 0px 2px 3px #ccc;
+    margin-left: 0px;   
+}

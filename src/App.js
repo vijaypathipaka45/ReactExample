@@ -10,33 +10,25 @@ import {withRouter,BrowserRouter, Route, Switch, Link, NavLink,browserHistory} f
 import Counter from './components/models/Counter';
 import HomePage from './components/models/HomePage';
 import TakeTest from './components/models/TakeTest';
+
+//import LogoutComponent from './components/login/LogoutComponent';
 import {history} from './components/_helpers/history'
 
 function App() {
   return (
-    <BrowserRouter forceRefresh={true}>
+    <BrowserRouter>
   <div className="App">     
      
-       {/* <Header/> */}
-      {/* <FormPage/> */}
-      {/* <Calculations/> */}
-      {/* <Example/>
-       <Footer/> */}
-
-{/* <Router>   */}
-     
+        
       <Route component={Header}/>
       <Route path="/" exact component={FormPage} /> 
       <Route path='/homePage' component={HomePage}/>
       <Route path='/takeTest' component={TakeTest}/>
       <Route path="/calculation" component={Calculations} /> 
-      <Route path="/counter" component={Counter} />  
+      <Route path="/counter" component={Counter} />
+      <Route path="/example" component={Example} />      
       <Route component={Footer}/> 
-      
-  {/* </Router>  */}
-
-
-       
+             
       </div>
 
       </BrowserRouter>
