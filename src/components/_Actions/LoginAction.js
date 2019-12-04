@@ -18,7 +18,8 @@ function login(username,password){
                 user => { 
                     dispatch(success(user));
                     console.log("history is ",history);
-                    //history.push('/counter');
+                    history.push('/counter');
+                   
                     console.log("action action::::::::::::::: ",user)
                     return user;
                 },

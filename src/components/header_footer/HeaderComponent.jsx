@@ -7,6 +7,7 @@ import {Link} from 'react-router-dom';
 import LogoutComponent from '../login/LogoutComponent';
 import Example from '../models/Example';
 import Asdf from '../login/Asdf';
+import ReactPdf from '../models/ReactPdf'
 class Header extends React.Component{
         constructor(props){
           super(props);
@@ -42,9 +43,12 @@ class Header extends React.Component{
                                 <div className="col-sm-3">
                                 {loginStatus == true ? <Button onClick={this.calculation}>Calculator</Button>:''}
                                 </div>
-                                <div className="col-sm-3">
+                                <div className="col-sm-2">
                                 {loginStatus == true ? <LogoutComponent/>:''}
                                 </div>
+                                {/* <div className="col-sm-1">
+                                <Link to="/reactPdf">PDF</Link> <ReactPdf/>
+                                </div> */}
                             </div>
                  </Navbar>
              </React.Fragment>
