@@ -4,6 +4,7 @@ import LoginAction from '../_Actions/LoginAction';
 import {connect} from 'react-redux';
 import LogModal from './LogModal';
 import Header from '../header_footer/FooterComponent'
+import {withRouter} from 'react-router-dom';
 
 class LogoutComponent extends React.Component{
     constructor(props){
@@ -79,4 +80,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(LogoutComponent);
+export default withRouter(connect(mapStateToProps)(LogoutComponent));
