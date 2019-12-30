@@ -33,7 +33,7 @@ userLogin = ()=>{
    .then(user=>{
      console.log("console ++++++++++++ ",user);
      if(user.loginStatus){
-      // this.props.history.push('/homePage',this.state)
+       this.props.history.push('/homePage',this.state)
      }
    });
     console.log('after method call')
