@@ -11,6 +11,7 @@ import Counter from './components/models/Counter';
 import HomePage from './components/models/HomePage';
 import TakeTest from './components/models/TakeTest';
 import ReactPdf from './components/models/ReactPdf';
+import FileUpload from './components/models/FileUpload';
 
 //import LogoutComponent from './components/login/LogoutComponent';
 import {history} from './components/_helpers/history'
@@ -22,7 +23,8 @@ function App() {
      
         
       <Route component={Header}/>
-      <Route path="/" exact component={FormPage} /> 
+      <Route path="/" exact component={FormPage} />
+      <Route path="/fileUpload" component={FileUpload}/> 
       <Route path='/homePage' component={HomePage}/>
       <Route path='/takeTest' component={TakeTest}/>
       <Route path="/calculation" component={Calculations} /> 
