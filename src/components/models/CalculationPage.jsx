@@ -43,7 +43,7 @@ class Calculations extends React.Component{
         division=()=>{ 
             console.log("division+++++++++++++++++",this.state)
 
-            axios.get("http://localhost:9090/division/"+this.state.firstNumber+"/and/"+this.state.secondNumber)
+            axios.get("http://localhost:8090/division/"+this.state.firstNumber+"/and/"+this.state.secondNumber)
         .then(response=>{
             this.setState({result:response.data});
             console.log('the division is',response);})
@@ -51,7 +51,7 @@ class Calculations extends React.Component{
     addition=()=>{  
        
         console.log("addition function ",this.state);
-       axios.get("http://localhost:9090/addingtwonumbers/"+this.state.firstNumber+"/and/"+this.state.secondNumber)
+       axios.get("http://localhost:8090/addingtwonumbers/"+this.state.firstNumber+"/and/"+this.state.secondNumber)
        .then(response=>{
            this.setState({result:response.data});
            console.log('the division is',response);})
@@ -60,7 +60,7 @@ class Calculations extends React.Component{
         }
     substraction = () => {
 
-        axios.get("http://localhost:9090/substraction/"+this.state.firstNumber+"/and/"+this.state.secondNumber)
+        axios.get("http://localhost:8090/substraction/"+this.state.firstNumber+"/and/"+this.state.secondNumber)
         .then(response=>{
             this.setState({result:response.data});
             console.log('the division is',response);})
@@ -68,7 +68,7 @@ class Calculations extends React.Component{
     }    
     multiplication=()=>{
 
-        axios.get("http://localhost:9090/multiplication/"+this.state.firstNumber+"/and/"+this.state.secondNumber)
+        axios.get("http://localhost:8090/multiplication/"+this.state.firstNumber+"/and/"+this.state.secondNumber)
         .then(response=>{
             this.setState({result:response.data});
             console.log('the division is',response);})

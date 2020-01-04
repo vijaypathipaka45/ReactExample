@@ -39,7 +39,7 @@ console.log('total options ',asdf)
 
             console.log("inside taketest score",score )
             
-            this.props.history.push('/homePage',this.state);
+            this.props.history.push('/app/homePage',this.state);
           });
       }
 

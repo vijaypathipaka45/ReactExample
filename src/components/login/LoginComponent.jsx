@@ -5,7 +5,7 @@ import {connect}  from 'react-redux';
 import {history} from '../_helpers/history';
 import { Button }  from 'react-bootstrap';
 
-class FormPage extends React.Component{
+class LoginComponent extends React.Component{
 constructor(props){
   super(props);
   //this.props.dispatch(LoginAction.logout());
@@ -33,7 +33,7 @@ userLogin = ()=>{
    .then(user=>{
      console.log("console ++++++++++++ ",user);
      if(user.loginStatus){
-       this.props.history.push('/homePage',this.state)
+       this.props.history.push('/app/homePage',this.state)
      }
    });
     console.log('after method call')
@@ -128,5 +128,5 @@ const mapStateToProps=(state)=> {
   };
 }
 
-export default connect(mapStateToProps)(FormPage);
+export default connect(mapStateToProps)(LoginComponent);
 //export default FormPage;

@@ -9,10 +9,10 @@ function login(username, password) {
     const requestOptions = {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: {'userName': username, 'password':password,'loginStatus':false }
+                    body: {'emailId': username, 'password':password,'loginStatus':false }
                     }
     //axios.get('http://localhost:9090/loginUser/vijay/and/vijay')
-   return  axios.post('http://localhost:9090/loginUser',requestOptions.body)
+   return  axios.post('http://localhost:8090/loginUser',requestOptions.body)
     .then(
         response =>{
 
@@ -28,10 +28,10 @@ function login(username, password) {
     const requestOptions = {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: {'userName': 'vijay', 'password':'vijay','loginStatus':false }
+                    body: {'emailId': 'vijay', 'password':'vijay','loginStatus':false }
                     }
     //axios.get('http://localhost:9090/loginUser/vijay/and/vijay')
-   return  axios.post('http://localhost:9090/loginUser',requestOptions.body)
+   return  axios.post('http://localhost:8090/loginUser',requestOptions.body)
     .then(
         response =>{
 

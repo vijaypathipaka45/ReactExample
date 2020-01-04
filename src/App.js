@@ -22,15 +22,16 @@ function App() {
   <div className="App">     
      
         
-      <Route component={Header}/>
+      
       <Route path="/" exact component={FormPage} />
-      <Route path="/fileUpload" component={FileUpload}/> 
-      <Route path='/homePage' component={HomePage}/>
-      <Route path='/takeTest' component={TakeTest}/>
-      <Route path="/calculation" component={Calculations} /> 
-      <Route path="/counter" component={Counter} />
-      <Route path="/example" component={Example} />
-      <Route path="/reactPdf" component={ReactPdf}/>
+      <Route path="/app" component={Header}/>
+      <Route path="/app/fileUpload" component={FileUpload}/> 
+      <Route path='/app/homePage' component={HomePage}/>
+      <Route path='/app/takeTest' component={TakeTest}/>
+      <Route path="/app/calculation" component={Calculations} /> 
+      <Route path="/app/counter" component={Counter} />
+      <Route path="/app/example" component={Example} />
+      <Route path="/app/reactPdf" component={ReactPdf}/>
       {/* <Route component={LogoutComponent} />       */}
       {/* <Route component={Footer}/>  */}
              

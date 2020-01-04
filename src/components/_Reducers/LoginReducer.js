@@ -2,7 +2,7 @@ import { loginConstants as userConstants } from '../_Constants/LoginConstants';
 
 const initialState={
 
-  userName:'',
+  emailId:'',
   password:'',
   loginStatus:false
 
@@ -16,14 +16,14 @@ function loginReducer(state = initialState, action) {
     case userConstants.LOGIN_REQUEST:
       return {
         ...state,
-        userName: action.user.userName
+        emailId: action.user.emailId
       };
     case userConstants.LOGIN_SUCCESS:
-        console.log('inside login reducer',action.user.loginStatus,' value ',action.user.userName );
+        console.log('inside login reducer',action.user.loginStatus,' value ',action.user.emailId );
       return {
         ...state,
         loginStatus: action.user.loginStatus,
-        userName: action.user.userName
+        emailId: action.user.emailId
       };
     case userConstants.LOGIN_FAILURE:
       return {

@@ -12,7 +12,7 @@ class HomePage extends Component{
 takeTest=()=>{
     const{dispatch}=this.props;
     dispatch(TakeTestAction.updatingAnswersToZero())
-    this.props.history.push('/takeTest',this.state);
+    this.props.history.push('/app/takeTest',this.state);
 }
 
     render(){

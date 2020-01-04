@@ -9,7 +9,7 @@ const TakeTestService={
 function getExamQuestions(){
 
 
-    return axios.get("http://localhost:9090/getAllExamQuestions").then(response=>{
+    return axios.get("http://localhost:8090/getAllExamQuestions").then(response=>{
 
         return response.data;
     })
@@ -32,7 +32,7 @@ var string='{'+submittedanswers+'}'
 
 //var str='{"1": "3","2": "4","3": "2","5": "1"}'
 //console.log('answers string ',string);
-    return axios.post('http://localhost:9090/submitPostAnswers',{string}).then(response=>{
+    return axios.post('http://localhost:8090/submitPostAnswers',{string}).then(response=>{
 
 
       console.log("the response data is+++++  ",response.data)   

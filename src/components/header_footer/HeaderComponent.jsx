@@ -16,12 +16,12 @@ class Header extends React.Component{
 
         console.log("counter function ");
         console.log("history ",history);        
-        this.props.history.push('/counter'); 
+        this.props.history.push('/app/counter'); 
     }
 
     calculation=()=>{
 
-        this.props.history.push('calculation',this.state)
+        this.props.history.push('/app/calculation',this.state)
 
     }
 
@@ -31,11 +31,12 @@ class Header extends React.Component{
             <React.Fragment className='header-main'>
                  <Navbar className="appheader">
                          <div className='container' >
-                             <NavbarBrand href='/'>{loginStatus == true ? "Welcome  "+userName :''} </NavbarBrand>
+                             <NavbarBrand>{loginStatus == true ? "Welcome  "+userName :''} </NavbarBrand>
+                             {loginStatus == true ?<Link to="/app/homePage"  className="btn btn-link">Home</Link>:''}
                          </div>
                             <div className="row">
                                 <div className="col-sm-3">
-                                {loginStatus == true ? <Link to="/example" className="btn btn-link">Example</Link>:''}
+                                {loginStatus == true ? <Link to="/app/example" className="btn btn-link">Example</Link>:''}
                                 </div>
                                 <div className="col-sm-3">
                                 {loginStatus == true ? <Button onClick={this.counterFunction}>Counter</Button>:''}
@@ -67,7 +68,7 @@ class Header extends React.Component{
         const { loginStatus } = state.LoginReducer;
         return {
           loginStatus : state.LoginReducer.loginStatus,
-          userName    : state.LoginReducer.userName
+          userName    : state.LoginReducer.emailId
 
         };
       }
